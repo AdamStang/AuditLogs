@@ -1,0 +1,8 @@
+<div class="row-container" [ngStyle]="styl">
+  <mat-icon> {{ icon }} </mat-icon>
+  <p class="row" [ngStyle]="{'text-indent': indent}"> 
+    <span class="key"> {{ data?.name }}: </span>
+    <span *ngIf="current && data.nodeType=='child'"> {{ data?.value ?? '' }} </span>
+    <span *ngIf="!current && data.nodeType=='child'"> {{ data?.valueBefore ?? '' }} </span>
+  </p>
+</div>

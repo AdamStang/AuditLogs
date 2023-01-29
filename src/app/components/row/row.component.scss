@@ -1,0 +1,14 @@
+.row-container {
+    display: flex;
+    align-items: center;
+    
+    .row{
+        padding: 6px;
+        white-space: nowrap;
+
+        .key{
+            font-weight: bold;
+        }
+    }
+
+}

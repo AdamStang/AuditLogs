@@ -1,0 +1,12 @@
+<div class="header">
+  <h3>Current</h3>
+  <h3>Previous</h3>
+</div>
+<div class="my-grid">
+  <div class="rows-container" (scroll)="updateLeftScroll(scrollOne, scrollTwo)" #scrollOne>
+    <app-row *ngFor="let row of rows" [data]="row" [current]="true"></app-row>
+  </div>
+  <div class="rows-container" (scroll)="updateRightScroll(scrollTwo, scrollOne)" #scrollTwo>
+    <app-row *ngFor="let row of rows" [data]="row" [current]="false"></app-row>
+  </div>
+</div>
